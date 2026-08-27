@@ -1,30 +1,99 @@
 
-GET http://localhost:3000/livros
+### ================= FILIAL =================
 
+### Listar todas as filiais
+GET http://localhost:3000/filiais
 
-GET http://localhost:3000/livros/1
+### Buscar filial por ID
+GET http://localhost:3000/filiais/1
 
-
-POST http://localhost:3000/livros
+### Cadastrar filial
+POST http://localhost:3000/filiais
 Content-Type: application/json
 
 {
-  "titulo": "Dominando Node.js Moderno",
-  "autor": "Joana Pereira",
-  "preco": 59.90,
-  "estoque": 10
+  "cnpj": "99887766000155",
+  "nome": "Filial Vespasiano",
+  "telefone": "3139998877",
+  "email": "vespasiano@empresa.com",
+  "cep": "33200000"
 }
 
-
-PUT http://localhost:3000/livros/1
+### Atualizar filial
+PUT http://localhost:3000/filiais/1
 Content-Type: application/json
 
 {
-  "titulo": "Introdução ao SQL (Edição Revisada)",
-  "autor": "Mauro Souza",
-  "preco": 54.90,
-  "estoque": 12
+  "cnpj": "12345678000190",
+  "nome": "Filial Centro Atualizada",
+  "telefone": "3132221199",
+  "email": "centro-novo@empresa.com",
+  "cep": "30110000"
 }
 
+### Remover filial
+DELETE http://localhost:3000/filiais/1
 
-DELETE http://localhost:3000/livros/1
+
+### ================= PRODUTO =================
+
+### Listar todos os produtos
+GET http://localhost:3000/produtos
+
+### Buscar produto por ID
+GET http://localhost:3000/produtos/1
+
+### Cadastrar produto
+POST http://localhost:3000/produtos
+Content-Type: application/json
+
+{
+  "nome": "Macarrão 500g",
+  "preco": 5.90,
+  "categoria": "Alimentos"
+}
+
+### Atualizar produto
+PUT http://localhost:3000/produtos/1
+Content-Type: application/json
+
+{
+  "nome": "Arroz 5kg Tipo 1",
+  "preco": 26.90,
+  "categoria": "Alimentos"
+}
+
+### Remover produto
+DELETE http://localhost:3000/produtos/1
+
+
+### ================= ESTOQUE =================
+
+### Listar todo o estoque
+GET http://localhost:3000/estoque
+
+### Buscar registro de estoque por ID
+GET http://localhost:3000/estoque/1
+
+### Cadastrar registro de estoque
+POST http://localhost:3000/estoque
+Content-Type: application/json
+
+{
+  "id_filial": 1,
+  "id_produto": 5,
+  "quantidade": 20
+}
+
+### Atualizar registro de estoque
+PUT http://localhost:3000/estoque/1
+Content-Type: application/json
+
+{
+  "id_filial": 1,
+  "id_produto": 1,
+  "quantidade": 50
+}
+
+### Remover registro de estoque
+DELETE http://localhost:3000/estoque/1
