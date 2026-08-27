@@ -1,0 +1,30 @@
+
+GET http://localhost:3000/livros
+
+
+GET http://localhost:3000/livros/1
+
+
+POST http://localhost:3000/livros
+Content-Type: application/json
+
+{
+  "titulo": "Dominando Node.js Moderno",
+  "autor": "Joana Pereira",
+  "preco": 59.90,
+  "estoque": 10
+}
+
+
+PUT http://localhost:3000/livros/1
+Content-Type: application/json
+
+{
+  "titulo": "Introdução ao SQL (Edição Revisada)",
+  "autor": "Mauro Souza",
+  "preco": 54.90,
+  "estoque": 12
+}
+
+
+DELETE http://localhost:3000/livros/1
