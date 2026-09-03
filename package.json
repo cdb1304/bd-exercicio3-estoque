@@ -24,6 +24,7 @@
   "homepage": "https://github.com/cdb1304/bd-exercicio3-estoque#readme",
   "dependencies": {
     "cors": "^2.8.6",
+    "expo": "^57.0.19",
     "express": "^5.2.1",
     "mysql2": "^3.23.3"
   }
